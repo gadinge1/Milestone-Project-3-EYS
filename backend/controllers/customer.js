@@ -4,11 +4,11 @@ const db = require('../models')
 const { Customer, SalesOrder } = db 
 const { Op } = require('sequelize')
 
-// FIND ALL customers
+// FIND ALL CUSTOMERS
 customers.get('/', async (req, res) => {
     try {
         const foundCustomers = await Customer.findAll({
-            order: [ [ '', '' ] ], // need to fix
+            order: [ [ 'name', 'ASC' ] ], // need to fix
             where: {
                 name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%` }
             }
@@ -28,7 +28,7 @@ customers.get('/:name', async (req, res) => {
                 { 
                     model: SalesOrder, 
                     as: "sales_orders", 
-                    attributes: { exclude: ["customer_id"] },
+                    attributes: { exclude: ["product_id", "customer_id"] },
                     include: { 
                         model: Product, // need fixing
                         as: "products", 
@@ -38,9 +38,10 @@ customers.get('/:name', async (req, res) => {
                 }
             ],
             order: [
-                [{ model: SalesOrder, as: "sales_orders" }, { model: Product, as: "products" }, 'string', 'DESC'], // need fixing
+                [{ model: SalesOrder, as: "sales_orders" } , 'transaction_date', 'DESC'], // need fixing
             ]
         })
+        console.log(foundCustomer)
         res.status(200).json(foundCustomer)
     } catch (error) {
         res.status(500).json(error)
