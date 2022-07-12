@@ -1,7 +1,7 @@
 // DEPENDENCIES 
 const carts = require('express').Router()
 const db = require('../models')
-const { Cart, Product, SalesOrder } = db 
+const { Cart, Product, SalesOrder } = db // need to make sure if this is correct
 const { Op } = require('sequelize')
 
 // FIND ALL CARTS
@@ -41,7 +41,7 @@ carts.get('/:name', async (req, res) => {
                 [{ model: SalesOrder, as: "sales_orders" }, { model: Product, as: "products" }, 'string', 'DESC'], // need fixing
             ]
         })
-        res.status(200).json(foundcart)
+        res.status(200).json(foundCart)
     } catch (error) {
         res.status(500).json(error)
     }
@@ -85,7 +85,7 @@ carts.delete('/:id', async (req, res) => {
             }
         })
         res.status(200).json({
-            message: `Successfully deleted ${deletedcarts} cart(s)`
+            message: `Successfully deleted ${deletedCarts} cart(s)`
         })
     } catch(err) {
         res.status(500).json(err)
