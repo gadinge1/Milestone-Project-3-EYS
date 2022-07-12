@@ -2,21 +2,21 @@
   "development": {
     "username": "root",
     "password": "i love kai",
-    "database": "music_tour",
+    "database": "ellavate_your_skin",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "root",
     "password": "i love kai",
-    "database": "music_tour_test",
+    "database": "ellavate_your_skin",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "root",
     "password": "i love kai",
-    "database": "music_tour_production",
+    "database": "ellavate_your_skin",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
