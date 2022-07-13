@@ -1,13 +1,13 @@
 // DEPENDENCIES 
 const customers = require('express').Router()
 const db = require('../models')
-const { Customer, SalesOrder } = db 
+const { customer, SalesOrder } = db 
 const { Op } = require('sequelize')
 
 // FIND ALL CUSTOMERS
 customers.get('/', async (req, res) => {
     try {
-        const foundCustomers = await Customer.findAll({
+        const foundCustomers = await customer.findAll({
             order: [ [ 'name', 'ASC' ] ], // need to fix
             where: {
                 name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%` }
@@ -22,7 +22,7 @@ customers.get('/', async (req, res) => {
 // FIND A SPECIFIC CUSTOMER
 customers.get('/:name', async (req, res) => {
     try {
-        const foundCustomer = await Customer.findOne({
+        const foundCustomer = await customer.findOne({
             where: { name: req.params.name },
             include: [
                 { 
@@ -51,7 +51,7 @@ customers.get('/:name', async (req, res) => {
 // CREATE A CUSTOMER or PROFILE
 customers.post('/', async (req, res) => {
     try {
-        const newCustomer = await Customer.create(req.body)
+        const newCustomer = await customer.create(req.body)
         res.status(200).json({
             message: 'Successfully inserted a new customer',
             data: newCustomer
@@ -64,7 +64,7 @@ customers.post('/', async (req, res) => {
 // UPDATE A CUSTOMER or PROFILE
 customers.put('/:id', async (req, res) => {
     try {
-        const updatedCustomers = await Customer.update(req.body, {
+        const updatedCustomers = await customer.update(req.body, {
             where: {
                 customer_id: req.params.id
             }
@@ -80,7 +80,7 @@ customers.put('/:id', async (req, res) => {
 // DELETE A CUSTOMER or PROFILE
 customers.delete('/:id', async (req, res) => {
     try {
-        const deletedCustomers = await Customer.destroy({
+        const deletedCustomers = await customer.destroy({
             where: {
                 customer_id: req.params.id
             }
