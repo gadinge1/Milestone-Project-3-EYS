@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
        // customer
       OrderHistory.hasMany( SalesOrder, { 
         as: 'sales_orders', 
-        foreignKey: 'customer_id' 
+        foreignKey: 'user_id' 
       })
      }
   };
@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
 }, {
   sequelize,
   modelName: 'OrderHistory',
-  tableName: 'OrderHistories',
+  tableName: 'ordersistories',
   timestamps: false
 })
 return OrderHistory

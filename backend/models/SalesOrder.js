@@ -9,15 +9,15 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-     static associate({ Product, customer }) {
+     static associate({ Product, User }) {
       // products
       SalesOrder.hasMany(Product, {
         foreignKey: "product_id",
         as: "products"
       })
       // customer
-      SalesOrder.hasMany(customer, {
-        foreignKey: "customer_id",
+      SalesOrder.hasMany(User, {
+        foreignKey: "user_id",
         as: "customers"
       })
     }
@@ -48,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
 }, {
   sequelize,
   modelName: 'SalesOrder',
-  tableName: 'SalesOrders',
+  tableName: 'salesorders',
   timestamps: false
 })
 return SalesOrder

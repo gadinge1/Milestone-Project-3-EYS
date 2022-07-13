@@ -1,7 +1,7 @@
 // DEPENDENCIES 
 const sales_orders = require('express').Router()
 const db = require('../models')
-const { SalesOrder, Product, Customer } = db // need to make sure if this is correct
+const { SalesOrder, Product, Account } = db // need to make sure if this is correct
 const { Op } = require('sequelize')
 
 // FIND ALL SALES ORDERS
@@ -22,7 +22,7 @@ sales_orders.get('/', async (req, res) => {
 // FIND A SPECIFIC SALE ORDER
 sales_orders.get('/:name', async (req, res) => {
     try {
-        const foundCart = await SalesOrder.findOne({
+        const foundSales_order = await SalesOrder.findOne({
             where: { name: req.params.name },
             include: [
                 { 

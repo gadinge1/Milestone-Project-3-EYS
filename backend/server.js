@@ -2,10 +2,10 @@
 const express = require('express')
 const app = express()
 const { Sequelize } = require('sequelize')
-const customersController = require('./controllers/customer')
-const cartsController = require('./controllers/cart')
-const salesOrdersController = require('./controllers/sales_order')
-const productsController = require('./controllers/product')
+const account = require('./controllers/account')
+const cart = require('./controllers/cart')
+const sales_order = require('./controllers/sales_order')
+const product = require('./controllers/product')
 
 
 // // SEQUELIZE CONNECTION
@@ -31,8 +31,8 @@ app.get('/', (req, res) => {
 })
 
 // CONTROLLERS  
-const customersController = require('./controllers/customer')
-app.use('/customers', customersController)
+const accountsController = require('./controllers/user')
+app.use('/accounts', accountsController)
 
 const cartsController = require('./controllers/cart')
 app.use('/carts', cartsController)

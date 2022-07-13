@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       // sales order
       Cart.hasMany( SalesOrder, { 
         as: 'sales_orders', 
-        foreignKey: 'customer_id'
+        foreignKey: 'user_id'
      })
     }
   };
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
   sequelize,
   modelName: 'Cart',
-  tableName: 'Carts',
+  tableName: 'carts',
   timestamps: false
   })
   return Cart

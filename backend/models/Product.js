@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
      static associate({ SalesOrder }) {
       // sales order
       Product.hasMany(SalesOrder, {
-        foreignKey: "customer_id",
+        foreignKey: "user_id",
         as: "sales_orders"
       })
       // cart 
@@ -52,7 +52,7 @@ module.exports = (sequelize, DataTypes) => {
 }, {
   sequelize,
   modelName: 'Product',
-  tableName: 'Products',
+  tableName: 'products',
   timestamps: false
 })
 return Product
