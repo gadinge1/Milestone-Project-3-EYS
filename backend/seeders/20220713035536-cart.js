@@ -9,7 +9,7 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    // note that this deletes ALL data from the bands table
+    // note that this deletes ALL data from the carts table
     await queryInterface.bulkDelete('cart', null, {})
   }
 }
