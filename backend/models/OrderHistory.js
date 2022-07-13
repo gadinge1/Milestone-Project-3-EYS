@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
 }, {
   sequelize,
   modelName: 'OrderHistory',
-  tableName: 'OrderHistorys',
+  tableName: 'OrderHistories',
   timestamps: false
 })
 return OrderHistory

@@ -9,15 +9,34 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
+     static associate({ Product, SalesOrder }) {
+       // product
+      Cart.hasMany( Product, { 
+        as: 'products', 
+        foreignKey: 'product_id' 
+      })
+      // sales order
+      Cart.hasMany( SalesOrder, { 
+        as: 'sales_orders', 
+        foreignKey: 'cart_id'
+     })
     }
-  }
+  };
   Cart.init({
-    cart_id: DataTypes.INTEGER
+    cart_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+  },
+    
   }, {
-    sequelize,
-    modelName: 'Cart',
-  });
-  return Cart;
-};
+  sequelize,
+  modelName: 'Cart',
+  tableName: 'Carts',
+  timestamps: false
+  })
+  return Cart
+  }
+
+// EXPORT 
+module.exports = Cart

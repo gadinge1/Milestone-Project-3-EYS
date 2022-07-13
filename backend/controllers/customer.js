@@ -28,12 +28,12 @@ customers.get('/:name', async (req, res) => {
                 { 
                     model: SalesOrder, 
                     as: "sales_orders", 
-                    attributes: { exclude: ["product_id", "customer_id"] },
-                    include: { 
-                        model: Product, // need fixing
-                        as: "products", 
-                        where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } } 
-                    }
+                    attributes: { exclude: ["customer_id"] },
+                    // include: { 
+                    //     model: Product, // need fixing
+                    //     as: "products", 
+                    //     where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } } 
+                    // }
     
                 }
             ],
