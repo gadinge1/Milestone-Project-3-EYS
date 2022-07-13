@@ -1,4 +1,3 @@
-// need to set FK to communicate to Customer
 'use strict';
 const {
   Model
@@ -10,14 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-     static associate({ Customer }) {
-       // customer
-      SalesOrder.hasMany( Customer, { 
-        as: 'customers', 
-        foreignKey: 'customer_id' 
-      })
-     }
-  };
+    static associate(models) {
+      // define association here
+    }
+  }
   SalesOrder.init({
     salesOrder_id: {
       type: DataTypes.INTEGER,
