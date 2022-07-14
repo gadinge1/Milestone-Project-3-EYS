@@ -7,8 +7,9 @@
   }
   
   .App h1 {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: cursive;
     margin-top: 0;
+    font-size: 60pt;
   }
   
   .title {
@@ -25,14 +26,14 @@
   }
   
   .navBar li {
-    display: inline;
+    display: inline-block;
     padding: 8px;
     background-color: #D1C1B4
     ;
   }
   
   li:hover {
-    background-color: #4E3830;
+    background-color: #D1C1B4;
   }
   
   .homepage {
@@ -57,9 +58,10 @@
   }
 
   .homepage img {
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     margin: 0 auto;
+    padding-bottom: 100px;
   }
   
   .App-header {
@@ -86,7 +88,7 @@
     width: 70%;
     height: 70%;
     margin: 0 auto;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
   
   .aboutpage h1 {
@@ -110,17 +112,28 @@
   }
   
   .products h1 {
-    border-bottom: 6px white solid;
-    font-size: 5vh;
+    border-bottom: 2px #D1C1B4 solid;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 35pt;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 15px;
+    padding-top: 15px;
   }
   
   .products ul {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    padding-bottom: 100px;
+    color: #4E3830;
   }
   
   .products li {
-    font-size: 20px;
+    font-size: 15pt;
     margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
   }
