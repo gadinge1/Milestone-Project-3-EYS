@@ -10,6 +10,7 @@ import SignUp from './users/SignUp';
 
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
+import FontAwesomeIcon from 'react-bootstrap/Nav'
 
 function App() {
 
@@ -20,7 +21,12 @@ function App() {
     <div className="App">
       <Router>
         <header>
-          <h1 className="title">Ellavate Your Skin</h1>
+          <h1 className="title">EYS</h1>
+          <p>Ellavate Your Skin</p>
+          {/* <div class="navBar">
+            <a href="#" class="navbar__link"></a>
+              <span class="material-icons">home</span>
+          </div> */}
 
           {/* <div className="navBar">
             <ul>
@@ -45,6 +51,9 @@ function App() {
               </Nav.Item>
               <Nav.Item >
                 <Nav.Link eventKey={"productsPage"}> <Link to="/products">Shop All</Link> </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+              <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
               </Nav.Item>
             </Nav>
           </Container>
