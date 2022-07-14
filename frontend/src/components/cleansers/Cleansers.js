@@ -40,8 +40,8 @@ function Cleansers() {
           </Container>
         </header>
 
-        <div className="display">
-          <Route path="/cleansers" render={() => <Cleansers cleansers={cleansers} />} />
+        {/* <div className="display">
+          <Route path="/cleansers" render={() => <Cleansers cleansers={cleansers} />} /> */}
 
         <div className="display">
           <Route path="/cleansers" component={Cleansers} />  

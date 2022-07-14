@@ -10,7 +10,7 @@ import SignUp from './users/SignUp';
 
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
-import FontAwesomeIcon from 'react-bootstrap/Nav'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
 
@@ -60,7 +60,7 @@ function App() {
         </header>
 
         <div className="display">
-          <Route path="/" component={Home} />
+          <Route path="/home" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/products" render={() => <ShopProducts products={products} />} />
           <Route exact path="/login" component={Login} />

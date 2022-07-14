@@ -4,14 +4,23 @@ export default function ShopProducts(props) {
 
     return (
         <div>
-            <div className="products">
-                <div className="productsHeader">
+            <div className="shop">
+                <div className="shopsHeader">
                     <h1>Shop All</h1>
                 </div>
-                <ul>
-                    {displayProducts}
-                </ul>
+                <div className="products1">
+                    <img src="glenna.jpg" alt="glenna" />
+                <div className="products2">
+                    <img src="kinn.jpg" alt="kinn" />
+                </div>
+                <div className="products3">
+                    <img src="harper.jpg" alt="harper" />
+                </div>
+                </div>
+                    <ul>
+                        {displayProducts}
+                    </ul>
+                  </div>  
             </div>
-        </div>
     )
 }
