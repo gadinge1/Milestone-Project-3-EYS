@@ -6,6 +6,8 @@ import Home from './components/Home'
 import About from './components/About'
 import ShopProducts from './components/ShopProducts'
 import Cart from './components/Cart';
+import User from './components/User';
+
 // import Login from './users/Login';
 // import SignUp from './users/SignUp';
 
@@ -57,7 +59,7 @@ function App() {
                 <Nav.Link eventKey={"productsPage"}> <Link to="/products">Shop All</Link> </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-              <FontAwesomeIcon icon={faUser} />
+              <Link to="/user"><FontAwesomeIcon icon={faUser} /></Link>
               </Nav.Item>
               <Nav.Item>
                 <Link to="/cart"><FontAwesomeIcon icon={faCartShopping} /></Link> 
@@ -71,6 +73,8 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/products" render={() => <ShopProducts products={products} />} />
           <Route path="/cart" component={Cart} />
+          <Route path="/user" component={User} />
+
 
 
           

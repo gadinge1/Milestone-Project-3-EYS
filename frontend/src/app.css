@@ -48,12 +48,13 @@
 
   .homepage h1 {
     border-bottom: 2px #D1C1B4 solid;
-    margin-inline-start: 12rem;
-    margin-inline-end: 12rem;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 35pt;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 35pt;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+    padding-top: 70px;
   }
   
   .homepage p {
@@ -67,7 +68,7 @@
     width: 50%;
     height: 50%;
     margin: 0 auto;
-    padding-bottom: 100px;
+    padding-bottom: 500px;
   }
   
   .App-header {
@@ -94,7 +95,7 @@
     width: 70%;
     height: 70%;
     margin: 0 auto;
-    padding-bottom: 100px;
+    padding-bottom: 500px;
   }
   
   .aboutpage h1 {
@@ -105,16 +106,18 @@
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom: 15px;
-    padding-top: 15px;
+    padding-top: 70px;
   }
   
   .shop {
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 50px;
-    font-size: 1.3vw;
-    font-weight: bold;
+    border-bottom: 2px #D1C1B4 solid;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 35pt;
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 15px;
+    padding-top: 70px;
   }
   
   .products1 img {
@@ -129,11 +132,14 @@
   .products2 img {
     width: 31%;
     height: 31%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding-bottom: 10px;
     padding-top: 10px;
-    float: right;
-    margin: auto 30px;
+    margin-left: 53px;
+    margin-right: 53px;
+    /* display: inline-block;
+    justify-content: center; */
+    
   }
 
   .products3 img {
@@ -162,8 +168,9 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15pt;
-    padding-bottom: 100px;
+    padding-bottom: 500px;
     color: #4E3830;
+    
   }
   
   .shop li {
@@ -174,13 +181,24 @@
 
   .cartpage h1{
     border-bottom: 2px #D1C1B4 solid;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 35pt;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 500px;
+    padding-top: 70px;
+  }
+
+  .userpage h1{
+    border-bottom: 2px #D1C1B4 solid;
     margin-inline-start: 12rem;
     margin-inline-end: 12rem;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 35pt;
     padding-bottom: 500px;
-    padding-top: 100px;
+    padding-top: 70px;
   }
 
 a {
