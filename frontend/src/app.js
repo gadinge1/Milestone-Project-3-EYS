@@ -5,12 +5,16 @@ import './app.css';
 import Home from './components/Home'
 import About from './components/About'
 import ShopProducts from './components/ShopProducts'
-import Login from './users/Login';
-import SignUp from './users/SignUp';
+import Cart from './components/Cart';
+// import Login from './users/Login';
+// import SignUp from './users/SignUp';
 
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
+
+
 
 function App() {
 
@@ -53,7 +57,10 @@ function App() {
                 <Nav.Link eventKey={"productsPage"}> <Link to="/products">Shop All</Link> </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-              <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+              <FontAwesomeIcon icon={faUser} />
+              </Nav.Item>
+              <Nav.Item>
+                <Link to="/cart"><FontAwesomeIcon icon={faCartShopping} /></Link> 
               </Nav.Item>
             </Nav>
           </Container>
@@ -63,8 +70,8 @@ function App() {
           <Route path="/home" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/products" render={() => <ShopProducts products={products} />} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/sign-up" component={SignUp} />
+          <Route path="/cart" component={Cart} />
+
 
           
         </div>
