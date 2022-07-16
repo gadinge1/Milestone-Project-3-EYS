@@ -38,7 +38,7 @@ carts.get('/:name', async (req, res) => {
                 }
             ],
             order: [
-                [{ model: SalesOrder, as: "sales_orders" }, { model: Product, as: "products" }, 'string', 'DESC'], // need fixing
+                [{ model: SalesOrder, as: "sales_orders" }, { model: Product, as: "products" }, 'transaction_date', 'DESC'], // need fixing
             ]
         })
         res.status(200).json(foundCart)

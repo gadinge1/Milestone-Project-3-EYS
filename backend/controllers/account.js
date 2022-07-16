@@ -1,7 +1,7 @@
 // DEPENDENCIES 
 const accounts = require('express').Router()
 const db = require('../models')
-const { User, SalesOrder } = db 
+const { Account, SalesOrder } = db 
 const { Op } = require('sequelize')
 const Account = require('../models/Account')
 
@@ -23,7 +23,7 @@ accounts.get('/', async (req, res) => {
 // FIND A SPECIFIC ACCOUNT
 accounts.get('/:name', async (req, res) => {
     try {
-        const foundAccounts = await Account.findOne({
+        const foundAccount = await Account.findOne({
             where: { name: req.params.name },
             include: [
                 { 

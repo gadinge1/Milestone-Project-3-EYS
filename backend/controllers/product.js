@@ -29,16 +29,16 @@ products.get('/:name', async (req, res) => {
                     model: SalesOrder, 
                     as: "products", 
                     attributes: { exclude: ["cart_id"] },
-                    include: { 
-                        model: Product, // need fixing
-                        as: "products", 
-                        where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } } 
-                    }
+                    // include: { 
+                    //     model: Product, // need fixing
+                    //     as: "products", 
+                    //     where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } } 
+                    // }
     
                 }
             ],
             order: [
-                [{ model: SalesOrder, as: "products" }, { model: Product, as: "products" }, 'string', 'DESC'], // need fixing
+                [{ model: SalesOrder, as: "sales_orders" }, 'transaction_date', 'DESC'], // need fixing
             ]
         })
         res.status(200).json(foundProduct)

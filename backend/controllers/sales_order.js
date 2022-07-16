@@ -26,19 +26,19 @@ sales_orders.get('/:name', async (req, res) => {
             where: { name: req.params.name },
             include: [
                 { 
-                    model: SalesOrder, 
-                    as: "sales_orders", 
-                    attributes: { exclude: ["cart_id"] },
+                    model: Account, 
+                    as: "accounts", 
+                    attributes: { exclude: ["account_id"] },
                     include: { 
-                        model: Product, // need fixing
-                        as: "products", 
+                        model: SalesOrder, // need fixing
+                        as: "sales_orders", 
                         where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } } 
                     }
     
                 }
             ],
             order: [
-                [{ model: SalesOrder, as: "sales_orders" }, { model: Product, as: "products" }, 'string', 'DESC'], // need fixing
+                [{ model: SalesOrder, as: "sales_orders" }, { model: Account, as: "accounts" }, 'transaction_date', 'DESC'], // need fixing
             ]
         })
         res.status(200).json(foundSales_order)
