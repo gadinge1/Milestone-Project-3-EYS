@@ -23,7 +23,7 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-        // note that this deletes ALL data from the customers table
+        // note that this deletes ALL data from the accounts table
         await queryInterface.bulkDelete('account', null, {})
     /**
      * Add commands to revert seed here.

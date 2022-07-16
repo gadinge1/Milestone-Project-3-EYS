@@ -1,9 +1,9 @@
-const { User } = require('../models/Account');
+const Account = require('../models/Account');
 
 let auth = (req, res, next) => {
   let id = req.cookies.w_auth;
 
-  User.findById(id, (err, user) => {
+  Account.findById(id, (err, user) => {
     if (err) throw err;
     if (!user)
       return res.json({
@@ -12,7 +12,7 @@ let auth = (req, res, next) => {
       });
 
     req.id = id;
-    req.user = user;
+    req.account = account;
     next();
   });
 };

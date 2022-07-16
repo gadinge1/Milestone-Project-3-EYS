@@ -47,7 +47,7 @@ carts.get('/:name', async (req, res) => {
     }
 })
 
-// CREATE A CART or PROFILE
+// CREATE A CART 
 carts.post('/', async (req, res) => {
     try {
         const newCart = await Cart.create(req.body)
@@ -60,7 +60,7 @@ carts.post('/', async (req, res) => {
     }
 })
 
-// UPDATE A CART or PROFILE
+// UPDATE A CART 
 carts.put('/:id', async (req, res) => {
     try {
         const updatedCarts = await Cart.update(req.body, {
@@ -76,7 +76,7 @@ carts.put('/:id', async (req, res) => {
     }
 })
 
-// DELETE A CART or PROFILE
+// DELETE A CART 
 carts.delete('/:id', async (req, res) => {
     try {
         const deletedCarts = await Cart.destroy({
