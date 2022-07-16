@@ -7,6 +7,7 @@ import About from './components/About'
 import ShopProducts from './components/ShopProducts'
 import Cart from './components/Cart';
 import User from './components/User';
+import Cleanser from './components/Cleanser';
 
 // import Login from './users/Login';
 // import SignUp from './users/SignUp';
@@ -74,6 +75,7 @@ function App() {
           <Route path="/products" render={() => <ShopProducts products={products} />} />
           <Route path="/cart" component={Cart} />
           <Route path="/user" component={User} />
+          <Route path="/cleanser" component={Cleanser} />
 
 
 
