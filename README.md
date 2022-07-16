@@ -66,6 +66,6 @@ Models for SQL Tables
 
 
 ### Table Relations
->![MilestoneProject3-api drawio](https://user-images.githubusercontent.com/92125395/179365995-53fcfe36-05d9-498e-8ff5-96a99a621f32.png) 
+<!-- >![MilestoneProject3-api drawio](https://user-images.githubusercontent.com/92125395/179365995-53fcfe36-05d9-498e-8ff5-96a99a621f32.png)  -->
 
 ![MilestoneProject3-api drawio](https://user-images.githubusercontent.com/92125395/179365995-53fcfe36-05d9-498e-8ff5-96a99a621f32.png)
