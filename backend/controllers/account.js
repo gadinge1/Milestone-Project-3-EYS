@@ -21,10 +21,10 @@ accounts.get('/', async (req, res) => {
 })
 
 // FIND A SPECIFIC ACCOUNT
-accounts.get('/:name', async (req, res) => {
+accounts.get('/:id', async (req, res) => {
     try {
         const foundAccount = await Account.findOne({
-            where: { name: req.params.name },
+            where: { name: req.params.id },
             include: [
                 { 
                     model: SalesOrder, 
@@ -44,6 +44,18 @@ accounts.get('/:name', async (req, res) => {
         })
         console.log(foundAccount)
         res.status(200).json(foundAccount)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
+// FIND ALL ACCOUNTS FOR SPECIFIC SALES ORDER
+accounts.get('/sales_order/:sales_orderId', async (req,res) => {
+    try {
+        const foundspecificSales_order = await SalesOrder.findAll({
+            where: { accountId: req.params.sales_orderId }
+        })
+        res.status(200).json(foundspecificSales_order)
     } catch (error) {
         res.status(500).json(error)
     }

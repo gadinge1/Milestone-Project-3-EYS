@@ -20,10 +20,10 @@ sales_orders.get('/', async (req, res) => {
 })
 
 // FIND A SPECIFIC SALE ORDER
-sales_orders.get('/:name', async (req, res) => {
+sales_orders.get('/:id', async (req, res) => {
     try {
         const foundSales_order = await SalesOrder.findOne({
-            where: { name: req.params.name },
+            where: { name: req.params.id },
             include: [
                 { 
                     model: Account, 
@@ -42,6 +42,17 @@ sales_orders.get('/:name', async (req, res) => {
             ]
         })
         res.status(200).json(foundSales_order)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+// FIND ALL SALES ORDER FOR SPECIFIC ACCOUNT/USER
+sales_orders.get('/account/:accountId', async (req,res) => {
+    try {
+        const foundspecificSales_order = await SalesOrder.findAll({
+            where: { accountId: req.params.accountId }
+        })
+        res.status(200).json(foundspecificSales_order)
     } catch (error) {
         res.status(500).json(error)
     }
