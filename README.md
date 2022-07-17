@@ -11,8 +11,21 @@ Payments, Order History
 
 ## Important Links
 
-- App AWS: ([Link])
-- Github Repo: ([Link])
+- AWS App: ([Link])
+- Github Repo: ([Link](https://github.com/gadinge1/Milestone-Project-3-EYS.git))
+
+## Functionality
+
+- Be able to click on the Nav Links 
+- Each Nav Link has its own page
+- User will Sign Up and Log In
+- User will have to Log In to Purchase
+- User can add products in the cart
+
+## Bonus Functionality
+
+- User can pay after adding products to cart
+- User can see Order History under user's account
 
 ## Data Models
 

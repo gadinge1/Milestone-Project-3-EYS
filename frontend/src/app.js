@@ -22,6 +22,7 @@ import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
 function App() {
 
   const products = ['Cleansers', 'Toners', 'Essence', 'Serums/Ampoules', 'Eye Creams' , 'Moisturizers' , 'Sunscreens']
+  const cleansers = ['1', '2', '3']
 
 
   return (
@@ -59,6 +60,9 @@ function App() {
               <Nav.Item >
                 <Nav.Link eventKey={"productsPage"}> <Link to="/products">Shop All</Link> </Nav.Link>
               </Nav.Item>
+              {/* <Nav.Item >
+                <Nav.Link eventKey={"cleansersPage"}> <Link to="/cleanser">Cleansers</Link> </Nav.Link>
+              </Nav.Item> issue with assigning the nav link under Shop All "Cleansers" */}
               <Nav.Item>
               <Link to="/account"><FontAwesomeIcon icon={faUser} /></Link>
               </Nav.Item>
@@ -75,7 +79,7 @@ function App() {
           <Route path="/products" render={() => <ShopProducts products={products} />} />
           <Route path="/cart" component={Cart} />
           <Route path="/account" component={Account} />
-          <Route path="/cleanser" component={Cleanser} />
+          <Route path="/cleansers" render={() => <Cleanser cleansers={cleansers} />} />
 
 
 

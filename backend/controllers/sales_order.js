@@ -1,7 +1,7 @@
 // DEPENDENCIES 
 const sales_orders = require('express').Router()
 const db = require('../models')
-const { SalesOrder, Product, Account } = db // need to make sure if this is correct
+const { SalesOrder, Product, Account } = db 
 const { Op } = require('sequelize')
 
 // FIND ALL SALES ORDERS
@@ -30,7 +30,7 @@ sales_orders.get('/:id', async (req, res) => {
                     as: "accounts", 
                     attributes: { exclude: ["account_id"] },
                     include: { 
-                        model: SalesOrder, // need fixing
+                        model: SalesOrder, 
                         as: "sales_orders", 
                         where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } } 
                     }
@@ -38,7 +38,7 @@ sales_orders.get('/:id', async (req, res) => {
                 }
             ],
             order: [
-                [{ model: SalesOrder, as: "sales_orders" }, { model: Account, as: "accounts" }, 'transaction_date', 'DESC'], // need fixing
+                [{ model: SalesOrder, as: "sales_orders" }, { model: Account, as: "accounts" }, 'transaction_date', 'DESC'], 
             ]
         })
         res.status(200).json(foundSales_order)

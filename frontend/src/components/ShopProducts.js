@@ -16,11 +16,11 @@ export default function ShopProducts(props) {
                 <div className="products3">
                     <img src="harper.jpg" alt="harper" />
                 </div>
-                </div>
-                    <ul>
-                        {displayProducts}
-                    </ul>
-                  </div>  
             </div>
+            <ul>
+                {displayProducts}
+            </ul>
+            </div>  
+        </div>
     )
 }

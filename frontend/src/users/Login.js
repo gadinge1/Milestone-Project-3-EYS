@@ -1,7 +1,6 @@
 import { useContext, useState } from "react"
 import { useHistory } from "react-router"
 import { CurrentAccount } from "../contexts/CurrentAccount"
-import { User } from "../components/User"
 
 function Login() {
 

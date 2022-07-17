@@ -8,7 +8,7 @@ const { Op } = require('sequelize')
 accounts.get('/', async (req, res) => {
     try {
         const foundAccounts = await Account.findAll({
-            order: [ [ 'name', 'ASC' ] ], // need to fix
+            order: [ [ 'name', 'ASC' ] ], 
             where: {
                 name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%` }
             }

@@ -1,14 +1,14 @@
 // DEPENDENCIES 
 const products = require('express').Router()
 const db = require('../models')
-const { Product, SalesOrder } = db // need to make sure if this is correct
+const { Product, SalesOrder } = db 
 const { Op } = require('sequelize')
 
 // FIND ALL PRODUCTS
 products.get('/', async (req, res) => {
     try {
         const foundProducts = await Product.findAll({
-            order: [ [ '', '' ] ], // need fixing
+            order: [ [ 'name', 'ASC' ] ], 
             where: {
                 name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%` }
             }

@@ -1,14 +1,14 @@
 // DEPENDENCIES 
 const carts = require('express').Router()
 const db = require('../models')
-const { Cart, Product, SalesOrder } = db // need to make sure if this is correct
+const { Cart, Product, SalesOrder } = db 
 const { Op } = require('sequelize')
 
 // FIND ALL CARTS
 carts.get('/', async (req, res) => {
     try {
         const foundCarts = await Cart.findAll({
-            order: [ [ '', '' ] ], // need to fix 
+            order: [ [ 'name', 'ASC' ] ], 
             where: {
                 name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%` }
             }
@@ -30,7 +30,7 @@ carts.get('/:name', async (req, res) => {
                     as: "sales_orders", 
                     attributes: { exclude: ["cart_id"] },
                     include: { 
-                        model: Product, // need fixing
+                        model: Product, 
                         as: "products", 
                         where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } } 
                     }
