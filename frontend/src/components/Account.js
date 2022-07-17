@@ -1,7 +1,7 @@
-export default function User() {
+export default function Account() {
     return (
-        <div className="userpage">
-            <div className='userHeader'/>
+        <div className="accountpage">
+            <div className='accountHeader'/>
             <h1>Account</h1>
                 <p></p>
                 
