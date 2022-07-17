@@ -3,7 +3,6 @@ const accounts = require('express').Router()
 const db = require('../models')
 const { Account, SalesOrder } = db 
 const { Op } = require('sequelize')
-const Account = require('../models/Account')
 
 // FIND ALL ACCOUNTS
 accounts.get('/', async (req, res) => {

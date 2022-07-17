@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 })
 
 // CONTROLLERS  
-const accountsController = require('./controllers/user')
+const accountsController = require('./controllers/account')
 app.use('/accounts', accountsController)
 
 const cartsController = require('./controllers/cart')

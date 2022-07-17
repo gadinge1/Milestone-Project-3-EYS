@@ -36,7 +36,5 @@ module.exports = (sequelize, DataTypes) => {
   timestamps: false
   })
   return Cart
-  }
+}
 
-// EXPORT 
-module.exports = Cart

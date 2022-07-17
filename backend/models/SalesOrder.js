@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const Account = require('./Account');
 module.exports = (sequelize, DataTypes) => {
   class SalesOrder extends Model {
     /**
@@ -9,16 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-     static associate({ Product, User }) {
+     static associate({ Product, Account }) {
       // products
       SalesOrder.hasMany(Product, {
         foreignKey: "product_id",
         as: "products"
       })
       // customer
-      SalesOrder.hasMany(User, {
-        foreignKey: "user_id",
-        as: "customers"
+      SalesOrder.hasMany(Account, {
+        foreignKey: "account_id",
+        as: "accounts"
       })
     }
   }
@@ -32,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false
   },
-    customer_id: {
+    account_id: {
       type: DataTypes.INTEGER,
       allowNull: false
   },
@@ -53,6 +54,3 @@ module.exports = (sequelize, DataTypes) => {
 })
 return SalesOrder
 }
-
-// EXPORT 
-module.exports = SalesOrder

@@ -15,11 +15,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "user_id",
         as: "sales_orders"
       })
-      // cart 
-      Product.hasMany( Cart, {
-        foreignKey: "cart_id",
-        as: "carts"
-      })
     }
   }
   Product.init({
@@ -57,6 +52,3 @@ module.exports = (sequelize, DataTypes) => {
 })
 return Product
 }
-
-// EXPORT 
-module.exports = Product

@@ -52,6 +52,3 @@ module.exports = (sequelize, DataTypes) => {
 })
 return OrderHistory
 }
-
-// EXPORT 
-module.exports = OrderHistory
