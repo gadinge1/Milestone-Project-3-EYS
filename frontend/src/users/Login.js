@@ -1,12 +1,12 @@
 import { useContext, useState } from "react"
 import { useHistory } from "react-router"
-import { CurrentUser } from "../contexts/CurrentUser"
+import { CurrentAccount } from "../contexts/CurrentAccount"
 
 function Login() {
 
     const history = useHistory()
 
-    const { setCurrentUser } = useContext(CurrentUser)
+    const { setCurrentAccount } = useContext(CurrentAccount)
 
     const [credentials, setCredentials] = useState({
         email: '',
@@ -17,7 +17,7 @@ function Login() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-        const response = await fetch(`http://localhost:5000/authentication/`, {
+        const response = await fetch(`http://localhost:3000/authentication/`, {
             method: 'POST',
             credentials: 'include',
             headers: {
@@ -29,7 +29,7 @@ function Login() {
         const data = await response.json()
 
         if (response.status === 200) {
-            setCurrentUser(data.user)
+            setCurrentAccount(data.account)
             history.push(`/`)
         } else {
             setErrorMessage(data.message)

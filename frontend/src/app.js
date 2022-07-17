@@ -7,7 +7,7 @@ import About from './components/About'
 import ShopProducts from './components/ShopProducts'
 import Cart from './components/Cart';
 import User from './components/User';
-import Cleanser from './components/Cleanser';
+import Cleanser from '../src/components/Products/Cleanser';
 
 // import Login from './users/Login';
 // import SignUp from './users/SignUp';

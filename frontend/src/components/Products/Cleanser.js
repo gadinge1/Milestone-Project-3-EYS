@@ -2,9 +2,9 @@
 
 export default function Cleanser() {
     return (
-        <div className="cleanserpage">
+        <div className="cleanserspage">
             <div className='cleanserHeader'/>
-            <h1>Your Cart is Empty</h1>
+            <h1>Cleansers</h1>
                 <p></p>
                 
                 

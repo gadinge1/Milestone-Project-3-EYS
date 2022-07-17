@@ -5,7 +5,7 @@ function SignUp() {
 
 	const history = useHistory()
 
-	const [user, setUser] = useState({
+	const [account, setAccount] = useState({
 		firstName: '',
 		lastName: '',
 		email: '',
@@ -15,12 +15,12 @@ function SignUp() {
 	async function handleSubmit(e) {
 		e.preventDefault()
 
-		await fetch(`http://localhost:5000/users/`, {
+		await fetch(`http://localhost:3000/account/`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify(user)
+			body: JSON.stringify(account)
 		})
 
 		history.push(`/`)
@@ -35,8 +35,8 @@ function SignUp() {
 						<label htmlFor="firstName">First Name</label>
 						<input
 							required
-							value={user.firstName}
-							onChange={e => setUser({ ...user, firstName: e.target.value })}
+							value={account.firstName}
+							onChange={e => setAccount({ ...account, firstName: e.target.value })}
 							className="form-control"
 							id="firstName"
 							name="firstName"
@@ -46,8 +46,8 @@ function SignUp() {
 						<label htmlFor="lastName">Last Name</label>
 						<input
 							required
-							value={user.lastName}
-							onChange={e => setUser({ ...user, lastName: e.target.value })}
+							value={account.lastName}
+							onChange={e => setAccount({ ...account, lastName: e.target.value })}
 							className="form-control"
 							id="lastName"
 							name="lastName"
@@ -60,8 +60,8 @@ function SignUp() {
 						<input
 							type="email"
 							required
-							value={user.email}
-							onChange={e => setUser({ ...user, email: e.target.value })}
+							value={account.email}
+							onChange={e => setAccount({ ...account, email: e.target.value })}
 							className="form-control"
 							id="email"
 							name="email"
@@ -72,8 +72,8 @@ function SignUp() {
 						<input
 							type="password"
 							required
-							value={user.password}
-							onChange={e => setUser({ ...user, password: e.target.value })}
+							value={account.password}
+							onChange={e => setAccount({ ...account, password: e.target.value })}
 							className="form-control"
 							id="password"
 							name="password"
