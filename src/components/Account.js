@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useHistory } from "react-router"
 
+
 function SignUp() {
 
 	const history = useHistory()
