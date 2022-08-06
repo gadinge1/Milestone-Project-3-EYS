@@ -11,7 +11,7 @@ Payments, Order History
 
 ## Important Links
 
-- AWS App: ([Link])
+- Heroku App: ([Link])
 - Github Repo: ([Link](https://github.com/gadinge1/Milestone-Project-3-EYS.git))
 
 ## Functionality
