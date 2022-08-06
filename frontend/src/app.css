@@ -131,10 +131,11 @@
     padding-bottom: 500px;
   }
 
-   .products img {
+  .products img {
     width: 27%;
     height: 27%;
     padding-top: 10px;
+    margin-left: -40pc;
   }
 
   .products2 img {
@@ -235,15 +236,75 @@
   
   }
 
-  .Cleanser h1 {
+  .cleanser h1 {
     border-bottom: 2px #D1C1B4 solid;
     margin-inline-start: 6rem;
     margin-inline-end: 6rem;
-    font-size: 35pt;
+    font-size: 20pt;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sans-serif;
     padding-bottom: 15px;
-    padding-top: 15px;
+    padding-top: 10px;
+  }
+  .tonerPage h1 {
+    border-bottom: 2px #D1C1B4 solid;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 20pt;
+    color: white;
+    font-family: sans-serif;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+  .essencePage h1 {
+    border-bottom: 2px #D1C1B4 solid;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 20pt;
+    color: white;
+    font-family: sans-serif;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+  .eyesPage h1 {
+    border-bottom: 2px #D1C1B4 solid;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 20pt;
+    color: white;
+    font-family: sans-serif;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+  .moisturizerPage h1 {
+    border-bottom: 2px #D1C1B4 solid;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 20pt;
+    color: white;
+    font-family: sans-serif;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+  .serumPage h1 {
+    border-bottom: 2px #D1C1B4 solid;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 20pt;
+    color: white;
+    font-family: sans-serif;
+    padding-bottom: 15px;
+    padding-top: 10px;
+  }
+  .sunscreenPage h1 {
+    border-bottom: 2px #D1C1B4 solid;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 20pt;
+    color: white;
+    font-family: sans-serif;
+    padding-bottom: 15px;
+    padding-top: 10px;
   }
 
   .categories {

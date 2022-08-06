@@ -54,7 +54,7 @@ function ShopProducts() {
                 <Route path="/toner" component={Toner} />
                 <Route path="/essence" component={Essence} />
                 <Route path="/serums" component={Serum} />
-                <Route path="eyes" component={Eyes} />
+                <Route path="/eyes" component={Eyes} />
                 <Route path="/moisturizer" component={Moisturizer} />
                 <Route path="/spf" component={Sunscreen} />
 
@@ -63,12 +63,12 @@ function ShopProducts() {
             <div className="products">
             <div className="products1" />
                     <img src="glenna.jpg" alt="glenna" />
-                <div className="products2">
+                {/* <div className="products2">
                     <img src="kinn.jpg" alt="kinn" />
                 </div>
                 <div className="products3">
                     <img src="harper.jpg" alt="harper" />
-                </div>
+                </div> */}
             </div>
 
             </Router>  
