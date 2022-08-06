@@ -1,4 +1,4 @@
-.App {
+  .App {
     text-align: center;
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) ), url('./images/olga-thelavart-1nrY9CLAGcI-unsplash.jpg');
     background-repeat: no-repeat;
@@ -31,10 +31,17 @@
     color: #4E3830;
   }
   
-  .navBar li {
-    display: inline-block;
+  .mainNav {
+    display: contents;
     padding: 8px;
     background-color: #D1C1B4
+    
+  }
+
+  .categories {
+    display: inline-block;
+    padding: 8px;
+    color: black;
     
   }
   
@@ -120,38 +127,36 @@
     padding-top: 70px;
   }
   
-  .products1 img {
-    width: 29.7%;
-    height: 29.7%;
-    margin: 0 auto;
-    padding-bottom: 10px;
+  .products {
+    padding-bottom: 500px;
+  }
+
+   .products img {
+    width: 27%;
+    height: 27%;
     padding-top: 10px;
-    float: left;
   }
 
   .products2 img {
-    width: 31%;
-    height: 31%;
-    /* margin: 0 auto; */
-    padding-bottom: 10px;
+    width: 28%;
+    height: 28%;
     padding-top: 10px;
-    margin-left: 53px;
-    margin-right: 53px;
+    margin-left: 100px;
+    margin-right: 50px; 
     /* display: inline-block;
     justify-content: center; */
     
-  }
+  } 
 
-  .products3 img {
-    width: 29.6%;
-    height: 29.6%;
+   .products3 img {
+    width: 28%;
+    height: 228%;
     margin: 0 auto;
-    padding-bottom: 10px;
     padding-top: 10px;
-    float: right;
-  }
+    margin-left: 30px;
+  } 
   
-  .shop h1 {
+  .Shop h1 {
     border-bottom: 2px #D1C1B4 solid;
     margin-inline-start: 6rem;
     margin-inline-end: 6rem;
@@ -159,7 +164,7 @@
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-bottom: 15px;
-    padding-top: 15px;
+    padding-top: 70px;
   }
   
   .shop ul {
@@ -190,18 +195,57 @@
     padding-top: 70px;
   }
 
-  .userpage h1{
+  .signup h1 {
     border-bottom: 2px #D1C1B4 solid;
-    margin-inline-start: 12rem;
-    margin-inline-end: 12rem;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 35pt;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 35pt;
-    padding-bottom: 500px;
+    padding-bottom: 15px;
     padding-top: 70px;
   }
 
-a {
-  color: black !important;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 1px !important;
+    margin-left: 1px !important;
+  }
+
+  form {
+    display: block;
+    margin-top: 0em;
+    padding-bottom: 500px !important;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    
+  }
+
+  div.row {
+    padding-bottom: 50px !important;
+  }
+
+  a {
+    color: black !important;
   
-}
+  }
+
+  .Cleanser h1 {
+    border-bottom: 2px #D1C1B4 solid;
+    margin-inline-start: 6rem;
+    margin-inline-end: 6rem;
+    font-size: 35pt;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .categories {
+    display: contents;
+  } 

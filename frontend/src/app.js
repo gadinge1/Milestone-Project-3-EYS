@@ -7,7 +7,14 @@ import About from './components/About'
 import ShopProducts from './components/ShopProducts'
 import Cart from './components/Cart';
 import Account from './components/Account';
-import Cleanser from '../src/components/Products/Cleanser';
+
+// import Cleanser from './components/Cleanser';
+// import Essence from './components/Essence';
+// import Toner from './components/Toner';
+// import Serum from './components/Serums';
+// import Moisturizer from './components/Moisturizer';
+// import Sunscreen from './components/Sunscreen';
+// import Cleanser from '../src/components/Products/Cleanser';
 
 // import Login from './users/Login';
 // import SignUp from './users/SignUp';
@@ -21,8 +28,8 @@ import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 
-  const products = ['Cleansers', 'Toners', 'Essence', 'Serums/Ampoules', 'Eye Creams' , 'Moisturizers' , 'Sunscreens']
-  const cleansers = ['1', '2', '3']
+  // const products = ['Cleansers', 'Toners', 'Essence', 'Serums/Ampoules', 'Eye Creams' , 'Moisturizers' , 'Sunscreens']
+  // const cleansers = ['1', '2', '3']
 
 
   return (
@@ -51,6 +58,7 @@ function App() {
           </div> */}
           <Container>
             <Nav defaultActiveKey="/" variant="tabs" fill>
+            <div className="mainNav" >
               <Nav.Item>
                 <Nav.Link eventKey={"homePage"}> <Link to="/home">Home</Link> </Nav.Link>
               </Nav.Item>
@@ -69,6 +77,7 @@ function App() {
               <Nav.Item>
                 <Link to="/cart"><FontAwesomeIcon icon={faCartShopping} /></Link> 
               </Nav.Item>
+            </div>
             </Nav>
           </Container>
         </header>
@@ -76,10 +85,10 @@ function App() {
         <div className="display">
           <Route path="/home" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/products" render={() => <ShopProducts products={products} />} />
+          <Route path="/products" component={ShopProducts} />
           <Route path="/cart" component={Cart} />
           <Route path="/account" component={Account} />
-          <Route path="/cleansers" render={() => <Cleanser cleansers={cleansers} />} />
+          {/* <Route path="/cleansers" render={() => <Cleanser cleansers={cleansers} />} /> */}
 
 
 
