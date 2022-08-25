@@ -1,6 +1,6 @@
 {
     "name": "react-router-solution",
-    "version": "0.1.0",
+    "version": "16.13.1",
     "private": true,
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.1.1",
